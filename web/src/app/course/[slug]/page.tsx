@@ -1,8 +1,42 @@
 import { allLessons, getNextLesson, getPrevLesson } from '@/data';
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 
 interface Props {
     params: Promise<{ slug: string }>;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { slug } = await params;
+    const lesson = allLessons.find((l) => l.slug === slug);
+
+    if (!lesson) {
+        return {
+            title: '找不到頁面 | Claude Code 實戰課程',
+        };
+    }
+
+    const chapterNum = lesson.navTitle.split(' ')[0];
+    const title = `${lesson.title} | Claude Code 實戰課程`;
+    const description = `第 ${chapterNum} 章：${lesson.title}。${lesson.type} - 深入學習 Claude Code 編碼助手的實戰技巧。`;
+
+    return {
+        title,
+        description,
+        openGraph: {
+            title,
+            description,
+            type: 'article',
+            siteName: 'Claude Code 實戰課程',
+            locale: 'zh_TW',
+            url: `https://tutorials-claude-code-in-action.vercel.app/course/${slug}`,
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title,
+            description,
+        },
+    };
 }
 
 export async function generateStaticParams() {

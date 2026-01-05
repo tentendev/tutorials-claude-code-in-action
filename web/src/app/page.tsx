@@ -1,5 +1,23 @@
-
 import { allLessons } from '@/data';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Claude Code 實戰課程 | 課程目錄',
+  description: '學習如何使用 Anthropic 的 Claude Code 編碼助手。涵蓋安裝配置、上下文管理、自定義命令、MCP 伺服器、GitHub 整合、Hooks 等實戰技巧。',
+  openGraph: {
+    title: 'Claude Code 實戰課程',
+    description: '學習如何使用 Anthropic 的 Claude Code 編碼助手。涵蓋安裝配置、上下文管理、自定義命令、MCP 伺服器、GitHub 整合、Hooks 等實戰技巧。',
+    type: 'website',
+    siteName: 'Claude Code 實戰課程',
+    locale: 'zh_TW',
+    url: 'https://tutorials-claude-code-in-action.vercel.app/',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Claude Code 實戰課程',
+    description: '學習如何使用 Anthropic 的 Claude Code 編碼助手。',
+  },
+};
 
 export default function Home() {
   return (
