@@ -11,11 +11,20 @@ export const metadata: Metadata = {
     siteName: 'Claude Code 實戰課程',
     locale: 'zh_TW',
     url: 'https://tutorials-claude-code-in-action.vercel.app/',
+    images: [
+      {
+        url: 'https://tutorials-claude-code-in-action.vercel.app/images/claude-code-tutorial-thumb.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Claude Code 實戰課程',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Claude Code 實戰課程',
     description: '學習如何使用 Anthropic 的 Claude Code 編碼助手。',
+    images: ['https://tutorials-claude-code-in-action.vercel.app/images/claude-code-tutorial-thumb.jpeg'],
   },
 };
 
