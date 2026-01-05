@@ -1,20 +1,35 @@
-
 'use client';
 
+import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { allLessons } from '@/data';
 
 export default function Sidebar() {
     const pathname = usePathname();
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <aside className="sidebar">
-            <a href="/" className="brand">
-                Claude Code
-                <span>實戰課程</span>
-            </a>
+        <aside className={`sidebar ${isOpen ? 'sidebar-open' : ''}`}>
+            <div className="sidebar-header">
+                <a href="/" className="brand">
+                    Claude Code
+                    <span>實戰課程</span>
+                </a>
+                <button
+                    className="menu-toggle"
+                    onClick={() => setIsOpen(!isOpen)}
+                    aria-label={isOpen ? '關閉選單' : '開啟選單'}
+                    aria-expanded={isOpen}
+                >
+                    <span className="menu-icon">
+                        <span className="menu-line"></span>
+                        <span className="menu-line"></span>
+                        <span className="menu-line"></span>
+                    </span>
+                </button>
+            </div>
 
-            <nav>
+            <nav className="sidebar-nav">
                 <ul className="nav-list">
                     <li className="nav-item">
                         <a
