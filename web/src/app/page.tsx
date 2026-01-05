@@ -1,5 +1,4 @@
 
-import Link from 'next/link';
 import { allLessons } from '@/data';
 
 export default function Home() {
@@ -15,7 +14,7 @@ export default function Home() {
 
         <div style={{ display: 'grid', gap: '1rem', marginTop: '2rem' }}>
           {allLessons.map(lesson => (
-            <Link
+            <a
               key={lesson.slug}
               href={`/course/${lesson.slug}`}
               className="course-card"
@@ -39,7 +38,7 @@ export default function Home() {
               <div style={{ display: 'flex', gap: '0.5rem' }}>
                 <span className="tag" style={{ fontSize: '0.7rem' }}>{lesson.type}</span>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
       </div>

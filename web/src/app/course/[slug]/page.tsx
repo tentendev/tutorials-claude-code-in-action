@@ -1,6 +1,4 @@
-
 import { allLessons, getNextLesson, getPrevLesson } from '@/data';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 interface Props {
@@ -43,21 +41,21 @@ export default async function LessonPage({ params }: Props) {
 
             <footer className="content-footer">
                 {prev ? (
-                    <Link href={`/course/${prev.slug}`} className="nav-button prev">
+                    <a href={`/course/${prev.slug}`} className="nav-button prev">
                         &larr; {prev.navTitle.split(' ').slice(1).join(' ')}
-                    </Link>
+                    </a>
                 ) : (
                     <div /> // Spacer
                 )}
 
                 {next ? (
-                    <Link href={`/course/${next.slug}`} className="nav-button next">
+                    <a href={`/course/${next.slug}`} className="nav-button next">
                         {next.navTitle.split(' ').slice(1).join(' ')} &rarr;
-                    </Link>
+                    </a>
                 ) : (
-                    <Link href="/" className="nav-button next">
+                    <a href="/" className="nav-button next">
                         返回目錄 &rarr;
-                    </Link>
+                    </a>
                 )}
             </footer>
         </main>

@@ -1,7 +1,6 @@
 
 'use client';
 
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { allLessons } from '@/data';
 
@@ -10,30 +9,30 @@ export default function Sidebar() {
 
     return (
         <aside className="sidebar">
-            <Link href="/" className="brand">
+            <a href="/" className="brand">
                 Claude Code
                 <span>實戰課程</span>
-            </Link>
+            </a>
 
             <nav>
                 <ul className="nav-list">
                     <li className="nav-item">
-                        <Link
+                        <a
                             href="/"
                             className={`nav-link ${pathname === '/' ? 'active' : ''}`}
                         >
                             <span className="chapter-num">00</span> 課程目錄
-                        </Link>
+                        </a>
                     </li>
                     {allLessons.map((lesson) => (
                         <li key={lesson.slug} className="nav-item">
-                            <Link
+                            <a
                                 href={`/course/${lesson.slug}`}
                                 className={`nav-link ${pathname === `/course/${lesson.slug}` ? 'active' : ''}`}
                             >
                                 <span className="chapter-num">{lesson.navTitle.split(' ')[0]}</span>
                                 {lesson.navTitle.split(' ').slice(1).join(' ')}
-                            </Link>
+                            </a>
                         </li>
                     ))}
                 </ul>
