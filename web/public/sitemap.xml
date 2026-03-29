@@ -1,112 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tutorials-claude-code-in-action.vercel.app/</loc>
+    <loc>https://tenten.co/claude-code/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://tutorials-claude-code-in-action.vercel.app/course/01-introduction</loc>
+    <loc>https://tenten.co/claude-code/course/01-introduction</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tutorials-claude-code-in-action.vercel.app/course/02-what-is-a-coding-assistant</loc>
+    <loc>https://tenten.co/claude-code/course/02-what-is-a-coding-assistant</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tutorials-claude-code-in-action.vercel.app/course/03-claude-code-in-action</loc>
+    <loc>https://tenten.co/claude-code/course/03-claude-code-in-action</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tutorials-claude-code-in-action.vercel.app/course/04-claude-code-setup</loc>
+    <loc>https://tenten.co/claude-code/course/04-claude-code-setup</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tutorials-claude-code-in-action.vercel.app/course/05-project-setup</loc>
+    <loc>https://tenten.co/claude-code/course/05-project-setup</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tutorials-claude-code-in-action.vercel.app/course/06-adding-context</loc>
+    <loc>https://tenten.co/claude-code/course/06-adding-context</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tutorials-claude-code-in-action.vercel.app/course/07-making-changes</loc>
+    <loc>https://tenten.co/claude-code/course/07-making-changes</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tutorials-claude-code-in-action.vercel.app/course/08-course-satisfaction-survey</loc>
+    <loc>https://tenten.co/claude-code/course/08-course-satisfaction-survey</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://tutorials-claude-code-in-action.vercel.app/course/09-controlling-context</loc>
+    <loc>https://tenten.co/claude-code/course/09-controlling-context</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tutorials-claude-code-in-action.vercel.app/course/10-custom-commands</loc>
+    <loc>https://tenten.co/claude-code/course/10-custom-commands</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tutorials-claude-code-in-action.vercel.app/course/11-mcp-servers-with-claude-code</loc>
+    <loc>https://tenten.co/claude-code/course/11-mcp-servers-with-claude-code</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tutorials-claude-code-in-action.vercel.app/course/12-github-integration</loc>
+    <loc>https://tenten.co/claude-code/course/12-github-integration</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tutorials-claude-code-in-action.vercel.app/course/13-introducing-hooks</loc>
+    <loc>https://tenten.co/claude-code/course/13-introducing-hooks</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tutorials-claude-code-in-action.vercel.app/course/14-defining-hooks</loc>
+    <loc>https://tenten.co/claude-code/course/14-defining-hooks</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tutorials-claude-code-in-action.vercel.app/course/15-implementing-a-hook</loc>
+    <loc>https://tenten.co/claude-code/course/15-implementing-a-hook</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tutorials-claude-code-in-action.vercel.app/course/16-gotchas-around-hooks</loc>
+    <loc>https://tenten.co/claude-code/course/16-gotchas-around-hooks</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tutorials-claude-code-in-action.vercel.app/course/17-useful-hooks</loc>
+    <loc>https://tenten.co/claude-code/course/17-useful-hooks</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tutorials-claude-code-in-action.vercel.app/course/18-another-useful-hook</loc>
+    <loc>https://tenten.co/claude-code/course/18-another-useful-hook</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tutorials-claude-code-in-action.vercel.app/course/19-the-claude-code-sdk</loc>
+    <loc>https://tenten.co/claude-code/course/19-the-claude-code-sdk</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tutorials-claude-code-in-action.vercel.app/course/20-quiz-on-claude-code</loc>
+    <loc>https://tenten.co/claude-code/course/20-quiz-on-claude-code</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://tutorials-claude-code-in-action.vercel.app/course/21-summary-and-next-steps</loc>
+    <loc>https://tenten.co/claude-code/course/21-summary-and-next-steps</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tenten.co/claude-code/course/22-claude-md-deep-dive</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tenten.co/claude-code/course/23-skills-system</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tenten.co/claude-code/course/24-session-memory</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tenten.co/claude-code/course/25-plan-mode-and-thinking</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tenten.co/claude-code/course/26-context-management-strategy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tenten.co/claude-code/course/27-vscode-and-ide-integration</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tenten.co/claude-code/course/28-claude-code-on-the-web</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tenten.co/claude-code/course/29-debugging-and-tdd-workflows</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tenten.co/claude-code/course/30-agent-teams-and-subagents</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tenten.co/claude-code/course/31-git-worktrees</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tenten.co/claude-code/course/32-cost-optimization</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tenten.co/claude-code/course/33-code-review-and-ci-automation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tenten.co/claude-code/course/34-permissions-and-enterprise</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tenten.co/claude-code/course/35-advanced-summary-and-resources</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

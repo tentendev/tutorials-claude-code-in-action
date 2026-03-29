@@ -136,6 +136,17 @@ a:hover {
   flex: 1;
 }
 
+.nav-section-header {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary, #999);
+  padding: 1rem 0.75rem 0.35rem;
+  margin-top: 0.25rem;
+  list-style: none;
+}
+
 .nav-item {
   margin-bottom: 0.25rem;
 }

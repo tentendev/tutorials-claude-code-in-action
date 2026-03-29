@@ -165,6 +165,16 @@ export const lessonsPart1: Lesson[] = [
           >
         </li>
       </ul>
+
+      <h2>其他安裝方式</h2>
+      <p>除了終端機版本，Claude Code 現在還提供多種使用方式：</p>
+      <ul>
+        <li><strong>VS Code 擴展</strong>：在 VS Code 中搜索 "Claude Code" 或執行 <code>code --install-extension anthropic.claude-code</code></li>
+        <li><strong>JetBrains 插件</strong>：在 JetBrains Marketplace 搜索 "Claude Code"，支持 IntelliJ IDEA、PyCharm、WebStorm 等</li>
+        <li><strong>桌面應用</strong>：Mac 和 Windows 版本可在 <a href="https://claude.ai/download">claude.ai/download</a> 下載</li>
+        <li><strong>網頁版</strong>：直接在 <a href="https://claude.ai/code">claude.ai/code</a> 使用，無需本地安裝</li>
+      </ul>
+      <p>更多 IDE 整合細節請參考第 27 課。</p>
     `
   },
   {
@@ -241,8 +251,22 @@ export const lessonsPart1: Lesson[] = [
       <ul>
         <li>只添加與當前任務相關的檔案</li>
         <li>利用 <code>/map</code> 查看專案結構，快速定位需要添加的檔案</li>
-        <li>如果上下文太多，Claude 可能會“注意力分散”，影響回答的精準度</li>
+        <li>如果上下文太多，Claude 可能會”注意力分散”，影響回答的精準度</li>
       </ul>
+
+      <h2>@-提及快速添加上下文</h2>
+      <p>除了 <code>/add</code> 命令，你還可以在對話中使用 <code>@</code> 符號快速引用：</p>
+      <ul>
+        <li><code>@filename</code>：模糊匹配檔案名，無需輸入完整路徑</li>
+        <li><code>@foldername</code>：引用整個目錄</li>
+        <li>支持拖放圖片和截圖直接添加到對話中</li>
+      </ul>
+
+      <h2>CLAUDE.md 持久上下文</h2>
+      <p>
+        如果你有些資訊希望 Claude 在每次對話中都能看到（例如專案約定、編碼規範），可以寫入專案根目錄的 <code>CLAUDE.md</code> 檔案。
+        Claude 會在每次啟動時自動讀取這個檔案。詳細介紹請參考第 22 課。
+      </p>
     `
   },
   {
@@ -364,6 +388,23 @@ export const lessonsPart1: Lesson[] = [
         靈活使用 Esc、中斷回退、<code>/compact</code> 與 <code>/clear</code>，讓 Claude 在開發流程中保持高效
         與專注。這些不是小技巧，而是高質量 AI 開發會話的基礎能力。
       </p>
+
+      <h2>上下文容量區間</h2>
+      <p>社群總結了一個實用的「上下文區間」框架，幫助你判斷何時該採取行動：</p>
+      <ul>
+        <li><strong style="color: #4CAF50;">綠區 (0-50%)</strong>：自由工作，上下文充裕</li>
+        <li><strong style="color: #FF9800;">黃區 (50-70%)</strong>：注意上下文使用量，避免添加不必要的資訊</li>
+        <li><strong style="color: #F44336;">橙區 (70-90%)</strong>：使用 <code>/compact</code> 壓縮對話</li>
+        <li><strong style="color: #D32F2F;">紅區 (90%+)</strong>：使用 <code>/clear</code> 或啟動新對話</li>
+      </ul>
+      <p>Claude Code 會在上下文達到約 83.5%（約 167K tokens）時自動觸發壓縮。更多策略請參考第 26 課。</p>
+
+      <h2>Session Memory</h2>
+      <p>
+        Claude Code 現在具備自動記憶功能。它會自動記住你的偏好、專案約定和過去的決策，
+        並在下次對話開始時自動載入相關記憶。你也可以用 <code>#</code> 手動添加記憶。
+        詳細介紹請參考第 24 課。
+      </p>
     `
   },
   {
@@ -424,6 +465,16 @@ Coverage:
           <p>
             自定義命令非常適合專案內的固定流程，例如測試、部署、代碼生成等。
           </p>
+
+          <h2>自定義命令 vs Skills</h2>
+          <p>
+            Claude Code 後來引入了 <strong>Skills 系統</strong>，與自定義命令有所不同：
+          </p>
+          <ul>
+            <li><strong>自定義命令</strong>：放在 <code>.claude/commands/</code> 目錄，由使用者以斜線觸發（如 <code>/audit</code>）</li>
+            <li><strong>Skills</strong>：放在 <code>.claude/skills/</code> 目錄，由 AI 自動發現和觸發，無需手動調用</li>
+          </ul>
+          <p>簡單來說，命令是「你告訴 Claude 做什麼」，而 Skills 是「Claude 自己知道什麼時候該做什麼」。詳細介紹請參考第 23 課。</p>
     `
   }
 ];

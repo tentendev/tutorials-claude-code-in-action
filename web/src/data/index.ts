@@ -1,10 +1,12 @@
 
 import { lessonsPart1, Lesson } from './lessons-part1';
 import { lessonsPart2 } from './lessons-part2';
+import { lessonsPart3 } from './lessons-part3';
 
 export const allLessons: Lesson[] = [
     ...lessonsPart1,
-    ...lessonsPart2
+    ...lessonsPart2,
+    ...lessonsPart3
 ];
 
 export function getLessonBySlug(slug: string): Lesson | undefined {

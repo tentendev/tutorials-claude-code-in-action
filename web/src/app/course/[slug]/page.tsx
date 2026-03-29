@@ -29,10 +29,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             type: 'article',
             siteName: 'Claude Code 實戰課程',
             locale: 'zh_TW',
-            url: `https://tutorials-claude-code-in-action.vercel.app/course/${slug}`,
+            url: `https://tenten.co/claude-code/course/${slug}`,
             images: [
                 {
-                    url: 'https://tutorials-claude-code-in-action.vercel.app/images/claude-code-tutorial-thumb.jpeg',
+                    url: 'https://tenten.co/claude-code/images/claude-code-tutorial-thumb.jpeg',
                     width: 1200,
                     height: 630,
                     alt: title,
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             card: 'summary_large_image',
             title,
             description,
-            images: ['https://tutorials-claude-code-in-action.vercel.app/images/claude-code-tutorial-thumb.jpeg'],
+            images: ['https://tenten.co/claude-code/images/claude-code-tutorial-thumb.jpeg'],
         },
     };
 }

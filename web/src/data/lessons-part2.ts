@@ -55,6 +55,19 @@ export const lessonsPart2: Lesson[] = [
         你可以讓它“讀取代碼庫，找出與那個 Jira ticket 相關的 bug，並查詢生產資料庫驗證數據”，
         所有操作都在一個對話中完成。
       </p>
+
+      <h2>快速添加 MCP 伺服器</h2>
+      <p>除了手動編輯配置檔案，你現在可以使用 CLI 命令快速添加：</p>
+      <pre><code>claude mcp add sqlite -- uvx mcp-server-sqlite --db-path ./my.db</code></pre>
+      <p>這會自動將伺服器配置寫入你的設定檔。</p>
+
+      <h2>進階 MCP 功能</h2>
+      <ul>
+        <li><strong>工具發現</strong>：使用 <code>/tools</code> 命令查看所有已連接的 MCP 工具</li>
+        <li><strong>延遲載入</strong>：Claude Code 會智慧識別並只啟用相關的 MCP 工具，減少啟動開銷</li>
+        <li><strong>Inline MCP</strong>：子代理可以定義自己的 MCP 伺服器，與父代理隔離</li>
+        <li><strong>Streamable HTTP</strong>：支持新的 HTTP 傳輸協議，適合遠端 MCP 伺服器</li>
+      </ul>
     `
   },
   {
@@ -106,6 +119,31 @@ export const lessonsPart2: Lesson[] = [
       </p>
       <p>
         Claude 會讀取 Issue 描述，定位代碼，嘗試修復，甚至為你推送一個包含修復的新分支。
+      </p>
+
+      <h2>GitHub Actions 自動化</h2>
+      <p>
+        Anthropic 提供了官方的 GitHub Action —— <code>claude-code-action</code>，可以在 GitHub Marketplace 找到。
+        它能自動對每個 PR 進行 AI 代碼審查。
+      </p>
+
+      <h3>設置步驟</h3>
+      <ol>
+        <li>在 Claude Code 中執行 <code>/install-github-app</code> 安裝 GitHub App</li>
+        <li>在倉庫的 <code>.github/workflows/</code> 目錄中配置 Action</li>
+        <li>每次 PR 提交時，Claude 會自動分析變更並留下審查評論</li>
+      </ol>
+
+      <h3>安全審查</h3>
+      <p>
+        除了代碼審查，還有專門的 <code>claude-code-security-review</code> Action，
+        用於自動掃描 PR 中的安全漏洞。
+      </p>
+
+      <h2>/pr 命令</h2>
+      <p>
+        Claude Code 內置了 <code>/pr</code> 命令（通過 Skills 系統），可以一鍵創建 PR：
+        自動生成標題、描述，並推送到遠端分支。
       </p>
     `
   },
@@ -415,6 +453,48 @@ for await (const message of query({
       </ul>
       <p>
         SDK 讓把 AI 能力融入任意開發環節，是自動化與集成場景的強大基礎設施。
+      </p>
+
+      <h2>Agent SDK（更新）</h2>
+      <p>
+        Claude Code SDK 現已更名為 <strong>Agent SDK</strong>，反映了其更廣泛的代理編排能力。
+        除了 TypeScript，現在也支持 Python：
+      </p>
+      <pre><code># Python 範例
+from claude_agent_sdk import query
+
+async for message in query(
+    prompt="分析 src/ 目錄中的所有 API 端點",
+    allowed_tools=["Read", "Glob", "Grep"]
+):
+    print(message)</code></pre>
+
+      <h2>結構化輸出</h2>
+      <p>Agent SDK 支持結構化輸出，確保回傳的 JSON 符合你定義的 Schema：</p>
+      <pre><code>const result = await query({
+  prompt: "列出所有 API 端點",
+  outputSchema: {
+    type: "object",
+    properties: {
+      endpoints: {
+        type: "array",
+        items: {
+          type: "object",
+          properties: {
+            method: { type: "string" },
+            path: { type: "string" },
+            description: { type: "string" }
+          }
+        }
+      }
+    }
+  }
+});</code></pre>
+
+      <h2>代理編排</h2>
+      <p>
+        Agent SDK 的核心能力是讓你構建多代理系統。你可以創建專門的子代理來處理不同任務，
+        並透過 SDK 協調它們的工作。更多關於多代理的介紹請參考第 30 課。
       </p>
     `
   },
